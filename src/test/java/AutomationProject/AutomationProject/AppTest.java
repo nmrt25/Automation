@@ -1,4 +1,4 @@
-package DevProject.DevProject;
+package AutomationProject.AutomationProject;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

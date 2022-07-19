@@ -1,4 +1,4 @@
-package DevProject.DevProject;
+package AutomationProject.AutomationProject;
 
 /**
  * Hello world!
