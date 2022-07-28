@@ -5,13 +5,6 @@ pipeline
 agent any
 
 
-stages{
-
-stage('docker'){
-steps{
-bat "docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.3.0-20220706"
-}
-}
 
 stage('Build'){
 steps{
