@@ -13,19 +13,23 @@ bat "mvn clean"
 }
 }
 
-stage('Install'){
+stage('Smoke Suite'){
 steps{
-bat "mvn install"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=smoke.xml"
 }
 }
 
-stage('test'){
+stage('Sanity Suite'){
 steps{
-bat "mvn test"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=Sanity.xml"
 }
 }
 
-
+stage('Regression Suite'){
+steps{
+bat "mvn clean test -Dsurefire.suiteXmlFiles=fullRegression.xml"
+}
+}
 
 }
 
