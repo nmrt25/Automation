@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests">
+<suite name="Suite" parallel="classes">
   <test name="Test">
     <classes>
       <class name="test.aress.com.Script1"/>
       <class name="test.aress.com.Script2"/>
       <class name="test.aress.com.Script3"/>
       <class name="test.aress.com.Script4"/>
-      <class name="AutomationProject.AutomationProject.AppTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

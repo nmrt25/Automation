@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-04T15:05:35 IST" name="Default suite" finished-at="2022-08-04T15:06:13 IST" duration-ms="38273">
+  <suite started-at="2022-08-04T17:21:13 IST" name="Suite" finished-at="2022-08-04T17:22:55 IST" duration-ms="102411">
     <groups>
     </groups>
-    <test started-at="2022-08-04T15:05:35 IST" name="Default test" finished-at="2022-08-04T15:06:13 IST" duration-ms="38273">
+    <test started-at="2022-08-04T17:21:13 IST" name="Test" finished-at="2022-08-04T17:22:55 IST" duration-ms="102411">
       <class name="test.aress.com.Script1">
-        <test-method signature="method1()[pri:0, instance:test.aress.com.Script1@306f16f3]" started-at="2022-08-04T15:05:35 IST" name="method1" finished-at="2022-08-04T15:06:13 IST" duration-ms="38221" status="PASS">
+        <test-method signature="method1()[pri:0, instance:test.aress.com.Script1@15bbf42f]" started-at="2022-08-04T17:21:13 IST" name="method1" finished-at="2022-08-04T17:22:54 IST" duration-ms="101149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- method1 -->
       </class> <!-- test.aress.com.Script1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="test.aress.com.Script4">
+        <test-method signature="method4()[pri:0, instance:test.aress.com.Script4@37654521]" started-at="2022-08-04T17:21:13 IST" name="method4" finished-at="2022-08-04T17:21:13 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method4 -->
+      </class> <!-- test.aress.com.Script4 -->
+      <class name="test.aress.com.Script2">
+        <test-method signature="method2()[pri:0, instance:test.aress.com.Script2@2df9b86]" started-at="2022-08-04T17:21:13 IST" name="method2" finished-at="2022-08-04T17:22:55 IST" duration-ms="102367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method2 -->
+      </class> <!-- test.aress.com.Script2 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -15,8 +15,9 @@ public void method1() throws MalformedURLException{
 		
 	ChromeOptions chromeOptions = new ChromeOptions();
 
-	WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/"), chromeOptions);
-	driver.get("http://www.google.com");
+	WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
+	driver.get("https://www.google.com");
+	System.out.println(driver.getTitle());
 	driver.quit();
 		
 		
