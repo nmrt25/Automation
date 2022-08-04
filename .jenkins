@@ -7,6 +7,18 @@ agent any
 
 stages{
 
+stage('Setup Docker Containers'){
+steps{
+bat "docker-compose -f docker-compose.yaml up"
+}
+}
+
+stage('Scale Up Container'){
+steps{
+bat "docker-compose up --scale chrome=5"
+}
+}
+
 stage('Build'){
 steps{
 bat "mvn clean"
