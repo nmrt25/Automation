@@ -3,8 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="dockerSetup.setupDocker.dockerup"/>
-		<class name="dockerSetup.setupDocker.scaleChrome"/>
+      <class name="dockerSetup.setupDocker"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
