@@ -40,6 +40,11 @@ public class teardownDocker {
 			} else {
 				break;
 			}
+			
+			File f = new File("logs.txt");
+			if(f.delete()) {
+				System.out.println("Clearing Logs file...");
+			}
 
 		}
 
