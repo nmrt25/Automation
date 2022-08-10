@@ -1,9 +1,7 @@
 pipeline
 
 {
-
 agent any
-
 
 stages{
 
@@ -20,12 +18,10 @@ bat "mvn clean test -Dsurefire.suiteXmlFiles=sscaleBrowser.xml"
 }
 }
 
-
-
 stage('Build'){
 steps{
 bat "mvn clean"
-}
+    }
 }
 
 stage('Smoke Suite'){
@@ -54,5 +50,5 @@ bat "mvn clean test -Dsurefire.suiteXmlFiles=dockerTearDown.xml"
 }
 
 }
-
 }
+
