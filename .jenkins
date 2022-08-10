@@ -1,16 +1,27 @@
 pipeline
 
 {
-
 agent any
 
-
 stages{
+
+stage('Docker Up'){
+steps{
+bat "mvn clean test -Dsurefire.suiteXmlFiles=dockerUp.xml"
+}
+}
+
+
+stage('Scale Browser'){
+steps{
+bat "mvn clean test -Dsurefire.suiteXmlFiles=sscaleBrowser.xml"
+}
+}
 
 stage('Build'){
 steps{
 bat "mvn clean"
-}
+    }
 }
 
 stage('Smoke Suite'){
@@ -31,6 +42,13 @@ bat "mvn clean test -Dsurefire.suiteXmlFiles=fullRegression.xml"
 }
 }
 
+
+stage('Tear Down Docker '){
+steps{
+bat "mvn clean test -Dsurefire.suiteXmlFiles=dockerTearDown.xml"
+}
 }
 
 }
+}
+
