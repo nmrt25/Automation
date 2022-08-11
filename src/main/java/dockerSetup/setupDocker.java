@@ -6,21 +6,26 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Calendar;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class setupDocker {
 
+	@SuppressWarnings("deprecation")
 	@Test
-	public void dockerUp() throws IOException {
+	public void dockerUp() throws IOException, InterruptedException {
 		boolean flag = false;
-		String file = "logs.txt";
-		Runtime rt = Runtime.getRuntime();
-		rt.exec("cmd /c start src//resources//dockerUp.bat");
+	String file = "logs.txt";
+			
+	Runtime rt = Runtime.getRuntime();
+	rt.exec("cmd /c start src\\resources\\dockerBat\\dockerUp.bat");
+	Thread.sleep(15000);
+		
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.SECOND, 30);
 		long timer = cal.getTimeInMillis();
-		System.out.println(timer);
+	//	System.out.println(timer);
 
 		while (System.currentTimeMillis() < timer) {
 			if (flag = false) {
@@ -42,6 +47,7 @@ public class setupDocker {
 				break;
 			}
 
+			Assert.assertTrue(flag);
 		}
 
 	}

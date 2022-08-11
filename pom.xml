@@ -55,7 +55,7 @@
 				<configuration>
 				<suiteXmlFiles>
 				 <!-- Pass testng.xml files as argument from command line -->
-					    <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+					    <suiteXmlFile>/${user.dir}/src/resources/suites/$(suiteXmlFiles)</suiteXmlFile>
 				</suiteXmlFiles>
 				</configuration>
 			</plugin>

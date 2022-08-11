@@ -7,14 +7,14 @@ stages{
 
 stage('Docker Up'){
 steps{
-bat "mvn clean test -Dsurefire.suiteXmlFiles=dockerUp.xml"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/dockerUp.xml"
 }
 }
 
 
 stage('Scale Browser'){
 steps{
-bat "mvn clean test -Dsurefire.suiteXmlFiles=scaleBrowser.xml"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/scaleBrowser.xml"
 }
 }
 
@@ -26,26 +26,26 @@ bat "mvn clean"
 
 stage('Smoke Suite'){
 steps{
-bat "mvn clean test -Dsurefire.suiteXmlFiles=smoke.xml"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/smoke.xml"
 }
 }
 
 stage('Sanity Suite'){
 steps{
-bat "mvn clean test -Dsurefire.suiteXmlFiles=Sanity.xml"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/Sanity.xml"
 }
 }
 
 stage('Regression Suite'){
 steps{
-bat "mvn clean test -Dsurefire.suiteXmlFiles=fullRegression.xml"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/fullRegression.xml"
 }
 }
 
 
 stage('Tear Down Docker '){
 steps{
-bat "mvn clean test -Dsurefire.suiteXmlFiles=dockerTearDown.xml"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/dockerTearDown.xml"
 }
 }
 
