@@ -10,7 +10,7 @@ public class scaleBrowser {
 		boolean flag = false;
 		String file = "logs.txt";
 		Runtime rt = Runtime.getRuntime();
-		rt.exec("cmd /c start scaleChrome.bat");
+		rt.exec("cmd /c start src//resources//scaleChrome.bat");
 
 	}
 

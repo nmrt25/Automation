@@ -16,7 +16,7 @@ public class setupDocker {
 		boolean flag = false;
 		String file = "logs.txt";
 		Runtime rt = Runtime.getRuntime();
-		rt.exec("cmd /c start dockerUp.bat");
+		rt.exec("cmd /c start src//resources//dockerUp.bat");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.SECOND, 30);
 		long timer = cal.getTimeInMillis();

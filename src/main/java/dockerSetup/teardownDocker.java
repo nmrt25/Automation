@@ -16,7 +16,7 @@ public class teardownDocker {
 		String file = "logs.txt";
 		boolean flag = false;
 		Runtime rt = Runtime.getRuntime();
-		rt.exec("cmd /c start dockerTearDown.bat");
+		rt.exec("cmd /c start src//resources//dockerTearDown.bat");
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.SECOND, 30);
 		long timer = cal.getTimeInMillis();
