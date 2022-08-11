@@ -14,7 +14,7 @@ bat "mvn clean test -Dsurefire.suiteXmlFiles=dockerUp.xml"
 
 stage('Scale Browser'){
 steps{
-bat "mvn clean test -Dsurefire.suiteXmlFiles=sscaleBrowser.xml"
+bat "mvn clean test -Dsurefire.suiteXmlFiles=scaleBrowser.xml"
 }
 }
 
