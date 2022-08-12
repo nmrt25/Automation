@@ -1,5 +1,4 @@
 pipeline
-
 {
 agent any
 
@@ -16,12 +15,6 @@ stage('Scale Browser'){
 steps{
 bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/scaleBrowser.xml"
 }
-}
-
-stage('Build'){
-steps{
-bat "mvn clean"
-    }
 }
 
 stage('Smoke Suite'){
