@@ -1,10 +1,10 @@
-pipeline
-{
-agent any
-stages{
-stage('Docker Up'){
-steps{
-bat "mvn clean test -Dsurefire.suiteXmlFiles=${user.dir}/src/resources/suites/dockerUp.xml"
-}
-}
-}}
+pipeline{
+      agent any
+        stages{
+              stage('Docker Up'){
+                  steps{
+                      bat "mvn clean test"
+                  }
+               }
+             }
+          }
