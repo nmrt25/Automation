@@ -27,7 +27,7 @@ steps{
 bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/fullRegression.xml"
 }
 }
-stage('Tear Down Docker '){
+stage('Tear Down Docker'){
 steps{
 bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/dockerTearDown.xml"
 }
