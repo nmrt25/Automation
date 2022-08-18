@@ -1,9 +1,14 @@
 pipeline{
       agent any
         stages{
-              stage('Clean'){
+              stage('DockerUp'){
                   steps{
-                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suitesdockerUp.xml"
+                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/dockerUp.xml"
+                 }
+               }  
+                stage('Docker Down'){
+                  steps{
+                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/dockerTearDown.xml"
                  }
                }  
              }
