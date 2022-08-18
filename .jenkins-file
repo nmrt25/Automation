@@ -5,8 +5,29 @@ pipeline{
                   steps{
                     bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/dockerUp.xml"
                  }
-               }  
-                stage('Docker Down'){
+               } 
+                stage('Scale Browser'){
+                  steps{
+                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/scaleBrowser.xml"
+                 }
+               } 
+                 stage('Smoke Suite'){
+                  steps{
+                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/smoke.xml"
+                 }
+               } 
+                stage('Sanity Suite'){
+                  steps{
+                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/Sanity.xml"
+                 }
+               } 
+                stage('Regression Suite'){
+                  steps{
+                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/fullRegression.xml"
+                 }
+               } 
+               
+                stage('Tear Down Docker'){
                   steps{
                     bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/dockerTearDown.xml"
                  }
