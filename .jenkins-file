@@ -1,35 +1,10 @@
 pipeline{
       agent any
         stages{
-              stage('Docker Up'){
+              stage('Clean'){
                   steps{
-                     bat "mvn clean test -Dsurefire.suiteXmlFiles=${user.dir}/src/resources/suites/dockerUp.xml"
+                     bat "mvn clean"
                   }
-               }
-                stage('Scale Browser'){
-                  steps{
-                     bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/scaleBrowser.xml"
-                  }
-               }
-                stage('Smoke Suite'){
-                  steps{
-                     bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/smoke.xml"
-                  }
-               }
-                stage('Sanity Suite'){
-                  steps{
-                     bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/Sanity.xml"
-                  }
-               }
-                stage('Regression Suite'){
-                  steps{
-                     bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/fullRegression.xml"
-                  }
-               }
-                stage('Tear Down Docker'){
-                  steps{
-                     bat "mvn clean test -Dsurefire.suiteXmlFiles=/${user.dir}/src/resources/suites/dockerTearDown.xml"
-                  }
-               }    
+               }  
              }
           }
