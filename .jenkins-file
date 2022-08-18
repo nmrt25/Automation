@@ -3,7 +3,7 @@ pipeline{
         stages{
               stage('Clean'){
                   steps{
-                    bat "mvn clean test -Dsurefire.suiteXmlFiles=${user.dir}/src/resources/suites/dockerUp.xml
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=${user.dir}/src/resources/suites/dockerUp.xml"
                   }
                }  
              }
