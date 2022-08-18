@@ -20,7 +20,7 @@ public class setupDocker {
 			
 	Runtime rt = Runtime.getRuntime();
 	rt.exec("cmd /c start src\\resources\\dockerBat\\dockerUp.bat");
-	Thread.sleep(20000);
+	
 		
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.SECOND, 30);
@@ -33,6 +33,7 @@ public class setupDocker {
 				String currentLine = reader.readLine();
 
 				while (currentLine != null) {
+					Thread.sleep(5000);
 					if (currentLine.contains("[NodeServer.lambda$createHandlers$2] - Node has been added")) {
 						System.out.println("breaking the loop");
 						flag = true;
@@ -46,7 +47,7 @@ public class setupDocker {
 			} else {
 				break;
 			}
-			Thread.sleep(10000);
+			
 			Assert.assertTrue(flag);
 		}
 
