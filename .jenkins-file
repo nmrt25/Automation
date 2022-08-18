@@ -4,12 +4,7 @@ pipeline{
               stage('Clean'){
                   steps{
                     bat "mvn clean test -Dsurefire.suiteXmlFiles=${user.dir}/src/resources/suites/dockerUp.xml"
-                  }
-               }  
-               stage('clear'){
-                  steps{
-                    bat "mvn clean test -Dsurefire.suiteXmlFiles=${user.dir}/src/resources/suites/dockerTearDown.xml"
-                  }
+                 }
                }  
              }
           }
