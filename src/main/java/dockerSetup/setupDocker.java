@@ -20,7 +20,7 @@ public class setupDocker {
 			
 	Runtime rt = Runtime.getRuntime();
 	rt.exec("cmd /c start src\\resources\\dockerBat\\dockerUp.bat");
-	Thread.sleep(15000);
+	Thread.sleep(20000);
 		
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.SECOND, 30);
@@ -46,7 +46,7 @@ public class setupDocker {
 			} else {
 				break;
 			}
-
+			Thread.sleep(10000);
 			Assert.assertTrue(flag);
 		}
 
