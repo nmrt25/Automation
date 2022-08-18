@@ -4,7 +4,6 @@
   <test name="Test">
     <classes>
       <class name="test.aress.com.Script4"/>
-      <class name="AutomationProject.AutomationProject.AppTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
