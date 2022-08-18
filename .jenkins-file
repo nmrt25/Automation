@@ -26,7 +26,6 @@ pipeline{
                     bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/fullRegression.xml"
                  }
                } 
-               
                 stage('Tear Down Docker'){
                   steps{
                     bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/dockerTearDown.xml"
