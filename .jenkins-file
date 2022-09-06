@@ -3,7 +3,7 @@ pipeline{
         stages{
               stage('DockerUp'){
                   steps{
-                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/dockerUp.xml"
+               sh  'docker-compose -f docker-compose.yaml up' 
                  }
                } 
                 stage('Scale Browser'){
@@ -29,7 +29,7 @@ pipeline{
                }
                 post {
                   always {
-                    bat "mvn clean install -Dsurefire.suiteXmlFiles=src/resources/suites/dockerTearDown.xml"
+                     sh  'docker-compose -f docker-compose.yaml down'
                  }
                }  
              }
